@@ -12,17 +12,13 @@ async function getJoke() {
         const response = await fetch(apiUrl);
         apiJoke = await response.json(); 
         let joke = apiJoke;
-            if (jokeSetup.textContent == '' && jokePunchline.textContent == '') {
-                    jokeSetup.textContent = joke.setup;
-                    jokePunchline.textContent = joke.punchline;
-            } else {
-                    jokeSetup.textContent = joke.setup;
-                    jokePunchline.textContent = joke.punchline;
-            }   
-    } catch (error) {
+        jokeSetup.textContent = joke.setup;
+        jokePunchline.textContent = joke.punchline;
+        }   
+    catch (error) {
         // Catch Error Here
     } 
-} 
+}
 
 
 // Event Listeners
